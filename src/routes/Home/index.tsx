@@ -33,7 +33,7 @@ export const Home = () => (
       <span>
         <CardWrapper className="transparent">
           <h3>Polkadot Live Docs</h3>
-          <p>Documentation for using and contributing to Polkadot Live.</p>
+          <p>Documentation for contributing to and using Polkadot Live.</p>
           <h4>
             <a
               href="https://docs.polkadot-live.app"
