@@ -1,0 +1,52 @@
+/* Copyright 2024 @polkadot-live/landing authors & contributors
+SPDX-License-Identifier: GPL-3.0-only */
+
+.theme-dark {
+  --background-default: #171717;
+  --background-primary: rgb(40 40 40);
+  --background-invert: #ddd;
+  --background-tooltip: #eee;
+
+  --border-primary-color: rgb(58 52 58);
+  --border-secondary-color: rgb(80 80 80);
+
+  --button-primary-background: rgb(55 50 55);
+  --button-secondary-background: rgb(55 50 55);
+  --button-tertiary-background: rgb(54 49 54);
+  --button-tab-background: rgb(100, 59, 100);
+  --button-hover-background: rgb(66 61 68);
+
+  --status-success-color: #74da77;
+  --status-success-color-transparent: rgb(0 128 0 / 25%);
+  --status-warning-color: rgb(219 161 0 / 100%);
+  --status-warning-color-transparent: rgb(255 165 0 / 50%);
+  --status-danger-color: #d14445;
+  --status-danger-color-transparent: rgb(255 0 0 / 25%);
+
+  --text-color-primary: #a7a7a7;
+  --text-color-secondary: #fff;
+  --text-color-tertiary: #817d82;
+  --text-color-invert: #0f0e0f;
+
+  --card-shadow-color: rgb(28 24 28 / 25%);
+  --card-deep-shadow-color: rgb(28 24 28 / 50%);
+  --card-shadow-color-secondary: rgb(28 24 28 / 25%);
+
+  --card-shadow: -1px -2px 12px 1px var(--card-shadow-color-secondary),
+    0px 0.75px 1px 0px var(--card-deep-shadow-color),
+    0 3.5px 6px -1px var(--card-shadow-color),
+    0.4px -0.4px 0px 0px var(--card-shadow-color),
+    -0.4px 0px 0px 0px var(--card-shadow-color);
+
+  --card-shadow-secondary: 0px 1px 1px 0px var(--card-shadow-color-secondary),
+    0 0.5px 1px -1px var(--card-shadow-color-secondary),
+    0.4px -0.4px 0px 0px var(--card-shadow-color-secondary),
+    -0.4px 0px 0px 0px var(--card-shadow-color-secondary);
+
+  --accent-color-primary: var(--accent-color-primary-dark);
+  --accent-color-secondary: var(--accent-color-secondary-dark);
+  --accent-color-tertiary: var(--accent-color-tertiary-dark);
+  --accent-color-stroke: var(--accent-color-stroke-dark);
+  --accent-color-transparent: var(--accent-color-transparent-dark);
+  --accent-color-pending: var(--accent-color-pending-dark);
+}

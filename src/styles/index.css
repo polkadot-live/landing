@@ -1,0 +1,121 @@
+/* Copyright 2024 @polkadot-live/landing authors & contributors
+SPDX-License-Identifier: GPL-3.0-only */
+
+/* NOTE: This file should be imported in the main library entry file. */
+
+/* Every element conforms to border-box by default. */
+
+html {
+  font-size: 14.5px;
+  @media (min-width: 600px) {
+    font-size: 15.5px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {
+  outline: none;
+}
+
+/* Define default body style and cancel out spacing. */
+
+body {
+  font-family: Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Define default header tag styling. */
+
+h1 {
+  font-family: Unbounded, sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.35rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+h2 {
+  font-family: InterBold, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+h3 {
+  font-family: InterSemiBold, sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h4 {
+  color: var(--text-color-secondary);
+  font-family: Inter, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.35rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h5 {
+  color: var(--text-color-tertiary);
+  font-size: 0.69rem;
+  line-height: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Define default paragraph style. */
+
+li, p {
+  font-size: .85rem;
+  line-height: 1.2rem;
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+/* Define default anchor style. */
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Define bare-bones button style. */
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  font-family: Inter, sans-serif;
+  font-size: 0.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+/* Define default input style. */
+
+input {
+  font-family: Inter, sans-serif;
+  background: none;
+  border: none;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
