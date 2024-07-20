@@ -4,7 +4,7 @@
 import { CardWrapper, PageContentWrapper } from 'Wrappers';
 import { HeadingWrapper, HomeWrapper } from './Wrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/pro-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 export const Home = () => (
   <PageContentWrapper className="thin">
