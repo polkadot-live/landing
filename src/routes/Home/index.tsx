@@ -36,11 +36,11 @@ export const Home = () => (
           <p>Documentation for contributing to and using Polkadot Live.</p>
           <h4>
             <a
-              href="https://docs.polkadot-live.app"
+              href="https://polkadot-live.github.io/"
               target="_blank"
               rel="noreferrer"
             >
-              https://docs.polkadot-live.app
+              https://polkadot-live.github.io/
               <FontAwesomeIcon icon={faExternalLinkAlt} transform="shrink-3" />
             </a>
           </h4>
