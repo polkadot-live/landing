@@ -3,6 +3,6 @@
 
 export const DappName = 'Polkadot Live';
 
-export const DocsUrl = 'https://docs.polkadot-live.app/';
+export const DocsUrl = 'https://polkadot-live.github.io/';
 
 export const GithubRepoUrl = 'https://github.com/polkadot-live/landing';
