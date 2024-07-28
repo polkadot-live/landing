@@ -50,8 +50,10 @@ export const HomeWrapper = styled.div`
         > div {
           margin: 0 2rem;
 
-          > img {
-            width: 15rem;
+          > a {
+            > img {
+              width: 15rem;
+            }
           }
         }
       }
