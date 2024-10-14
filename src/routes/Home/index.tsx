@@ -19,7 +19,7 @@ export const Home = () => (
         <div className="download">
           <div>
             <a
-              href="https://github.com/polkadot-live/polkadot-live-app/releases/download/v0.1.1-alpha/Polkadot.Live-0.1.1-alpha-arm64.dmg"
+              href="https://github.com/polkadot-live/polkadot-live-app/releases/download/v0.2.0-alpha/Polkadot.Live-0.2.0-alpha-arm64.dmg"
               download
             >
               <img src="/png/DownloadMac.png" />
@@ -27,7 +27,7 @@ export const Home = () => (
           </div>
           <div>
             <a
-              href="https://github.com/polkadot-live/polkadot-live-app/releases/download/v0.1.1-alpha/Polkadot.Live-0.1.1-alpha.Setup.exe"
+              href="https://github.com/polkadot-live/polkadot-live-app/releases/download/v0.2.0-alpha/Polkadot.Live-0.2.0-alpha.Setup.exe"
               download
             >
               <img src="/png/DownloadWindows.png" />
