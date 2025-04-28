@@ -44,7 +44,7 @@ export const HomeWrapper = styled.div`
         justify-content: center;
         width: 100%;
 
-        @media (max-width: 700px) {
+        @media (max-width: 900px) {
           flex-direction: column;
         }
         > div {
