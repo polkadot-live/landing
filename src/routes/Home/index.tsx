@@ -27,6 +27,14 @@ export const Home = () => (
           </div>
           <div>
             <a
+              href="https://github.com/polkadot-live/polkadot-live-app/releases/download/v0.10.0-alpha/Polkadot.Live.Setup.0.10.0-alpha.exe"
+              download
+            >
+              <img src="/png/DownloadWindows.png" />
+            </a>
+          </div>
+          <div>
+            <a
               href="https://github.com/polkadot-live/polkadot-live-app/releases/download/v0.10.0-alpha/Polkadot-Live-0.10.0-alpha.AppImage"
               download
             >
