@@ -51,7 +51,7 @@ export const Transparency = () => (
             />
             <ActionBtn
               highlight={false}
-              href={'#'}
+              href={'https://docs.polkadot-live.app/overview'}
               icon={'auto_stories'}
               title={'Read Documentation'}
             />
