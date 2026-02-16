@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.ts";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-sans overflow-x-hidden;
+    @apply bg-background-light text-slate-900 selection:bg-primary/9 selection:text-slate-900;
+    @apply dark:bg-background-dark dark:text-slate-200 dark:selection:bg-primary dark:selection:text-white;
+  }
+}
+
+@layer components {
+  /** Nav bar */
+  .nav-outer {
+    @apply sticky top-0 z-50 border-b backdrop-blur-sm;
+    @apply border-light-border bg-white/95;
+    @apply dark:border-white/5 dark:bg-background-dark/95;
+  }
+  .nav-inner {
+    @apply max-w-7xl mx-auto px-8 h-16 flex items-center justify-between;
+  }
+  .nav-items {
+    @apply hidden sm-nav:flex items-center gap-10 text-[10px] font-medium uppercase tracking-[0.2em];
+    @apply text-slate-500;
+    @apply dark:text-slate-400;
+  }
+  .get-started {
+    @apply flex items-center gap-4;
+  }
+  .get-started .tag {
+    @apply px-5 py-1.5 rounded-sm text-[10px] font-bold uppercase tracking-widest transition-all;
+    @apply text-white bg-primary hover:bg-primary/90;
+  }
+}
+
+@layer utils {
+  .flat-button {
+    @apply px-5 py-2.5 rounded-sm transition-all duration-200 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider cursor-pointer;
+  }
+  .pillar-tag {
+    @apply flex items-center gap-2 px-4 py-2 border text-[10px] font-medium uppercase tracking-[0.15em];
+    @apply border-black/[0.08] bg-white text-slate-600;
+    @apply dark:border-white/5 dark:bg-surface-dark/50 dark:text-slate-400;
+  }
+  .hub-card {
+    @apply flex flex-col items-center text-center p-8 transition-all duration-300;
+  }
+  .visual-circle-lite {
+    @apply absolute rounded-full border border-black/8 dark:border-white/5;
+  }
+  .visual-hex-lite {
+    @apply relative flex items-center justify-center w-24 h-24 mb-6;
+  }
+  .border-hover-primary {
+    @apply hover:border-primary/40 transition-all;
+    @apply dark:hover:border-primary/40;
+  }
+  /** Action buttons */
+  .action-btn-primary {
+    @apply text-white hover:bg-primary/90 bg-primary hover:bg-primary/90;
+    @apply dark:hover:bg-primary/90;
+  }
+  .action-btn-secondary {
+    @apply bg-white dark:bg-[#252525] text-slate-900 border border-slate-200 hover:bg-slate-50;
+    @apply dark:text-white dark:border-white/5 dark:hover:bg-white/10;
+  }
+  /** Download buttons */
+  .download-btn-primary {
+    @apply bg-slate-900 text-white border;
+    @apply dark:bg-surface-dark dark:border-white/10;
+  }
+  .download-btn-primary:not(.coming-soon):hover {
+    @apply bg-slate-800;
+    @apply dark:bg-white/5;
+  }
+  .download-btn-secondary {
+    @apply bg-white text-slate-900 border border-slate-200;
+    @apply dark:border-white dark:text-black;
+  }
+  .download-btn-secondary:not(.coming-soon):hover {
+    @apply bg-slate-50;
+    @apply dark:bg-slate-200;
+  }
+  .coming-soon {
+    @apply cursor-not-allowed opacity-60;
+    @apply dark:opacity-40;
+  }
+  .download-btn-primary,
+  .download-btn-secondary {
+    @apply transition-all;
+  }
+}
+
+:root {
+  --primary: #e6007a;
+  --background-dark: #121212;
+  --surface-dark: #1a1a1a;
+  --border-dark: #2a2a2a;
+  --card-hover: #222222;
+
+  --polkadot: #e6007a;
+  --kusama: #a020f0;
+  --paseo: #a1a1aa;
+
+  --theme-toggle-light: var(--color-slate-500);
+  --theme-toggle-dark: var(--color-slate-400);
+}
+.network-topology {
+  background-image:
+    radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.05) 1px, transparent 0),
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size:
+    40px 40px,
+    120px 120px,
+    120px 120px;
+}
+.dark .network-topology {
+  background-image:
+    radial-gradient(
+      circle at 2px 2px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 0
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size:
+    40px 40px,
+    120px 120px,
+    120px 120px;
+}
+.contribution-pixel {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
