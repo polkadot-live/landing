@@ -43,13 +43,6 @@ export const Header = () => {
                 label={'Linux'}
                 theme={'dark'}
               />
-              <DownloadBtn
-                href="#"
-                icon={'extension'}
-                label={'Extension'}
-                theme={'dark'}
-                isComingSoon={true}
-              />
             </div>
           </div>
           <div className="hidden sm-header:block">
@@ -57,7 +50,7 @@ export const Header = () => {
             <div className="flex justify-end pr-1 z-10">
               <div className="mt-4 z-50">
                 <a
-                  href={'#'}
+                  href={'https://docs.polkadot-live.app/gallery'}
                   type="button"
                   target="_blank"
                   rel="noopener"

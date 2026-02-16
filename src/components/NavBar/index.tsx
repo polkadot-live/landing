@@ -30,7 +30,12 @@ export const NavBar = () => (
       </div>
 
       <div className="get-started">
-        <a className="tag" href="#" target="_blank" rel="noopener">
+        <a
+          className="tag"
+          href="https://docs.polkadot-live.app/overview"
+          target="_blank"
+          rel="noopener"
+        >
           Get Started
         </a>
         <ThemeToggle />

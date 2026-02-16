@@ -29,7 +29,10 @@ export const Footer = () => (
             Resources
           </h6>
           <ul className="space-y-4 text-[10px] font-medium uppercase tracking-widest text-slate-500 dark:text-slate-400">
-            <FooterLink label={'Documentation'} href={'#'} />
+            <FooterLink
+              label={'Documentation'}
+              href={'https://docs.polkadot-live.app/overview'}
+            />
             <FooterLink
               label={'GitHub'}
               href={'https://github.com/polkadot-live'}
@@ -55,8 +58,14 @@ export const Footer = () => (
       <div className="pt-8 border-t border-slate-100 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[9px] font-bold dark:font-medium uppercase tracking-[0.2em] text-slate-400 dark:text-slate-600">
         <p>© 2025 Polkadot Live Authors and Contributors.</p>
         <div className="flex gap-10">
-          <FooterAnc label={'Privacy'} href={'#'} />
-          <FooterAnc label={'Disclaimer'} href={'#'} />
+          <FooterAnc
+            label={'Privacy'}
+            href={'https://docs.polkadot-live.app/privacy'}
+          />
+          <FooterAnc
+            label={'Disclaimer'}
+            href={'https://docs.polkadot-live.app/disclaimer'}
+          />
         </div>
       </div>
     </div>
