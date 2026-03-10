@@ -95,11 +95,11 @@ export const Carousel = (): JSX.Element => {
             ref={trackRef}
             style={{ transform: 'translateX(0px)' }}
           >
-            <CarouselItem src={`carousel/01-${theme}.webp`} />
-            <CarouselItem src={`carousel/02-${theme}.webp`} />
-            <CarouselItem src={`carousel/03-${theme}.webp`} />
-            <CarouselItem src={`carousel/04-${theme}.webp`} />
-            <CarouselItem src={`carousel/05-${theme}.webp`} />
+            <CarouselItem src={`/carousel/01-${theme}.webp`} />
+            <CarouselItem src={`/carousel/02-${theme}.webp`} />
+            <CarouselItem src={`/carousel/03-${theme}.webp`} />
+            <CarouselItem src={`/carousel/04-${theme}.webp`} />
+            <CarouselItem src={`/carousel/05-${theme}.webp`} />
           </div>
         </div>
         <CarouselBtn direction="left" onClick={() => moveCarousel(-1)} />
