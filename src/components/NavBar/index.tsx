@@ -1,6 +1,31 @@
+import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../ThemeToggle';
 
-const NavItem = ({
+const HashLink = ({
+  to,
+  className,
+  children,
+}: {
+  to: string;
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const id = to.startsWith('#') ? to.slice(1) : to;
+
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  return (
+    <a href={to} className={className} onClick={handleClick}>
+      {children}
+    </a>
+  );
+};
+
+export const NavItem = ({
   label,
   href,
   variant = 'right',
@@ -8,21 +33,37 @@ const NavItem = ({
   label: string;
   href: string;
   variant?: 'left' | 'right';
-}) => (
-  <a
-    className={`hover:text-primary transition-colors ${
-      variant === 'right' ? 'font-semibold' : 'font-normal'
-    }`}
-    href={href}
-  >
-    {label}
-  </a>
-);
+}) => {
+  const className = `hover:text-primary transition-colors ${
+    variant === 'right' ? 'font-semibold' : 'font-semibold'
+  }`;
 
-export const NavBar = () => (
+  if (href.startsWith('/')) {
+    return (
+      <Link to={href} className={className}>
+        {label}
+      </Link>
+    );
+  }
+  if (href.startsWith('#')) {
+    return (
+      <HashLink to={href} className={className}>
+        {label}
+      </HashLink>
+    );
+  }
+
+  return (
+    <a className={className} href={href}>
+      {label}
+    </a>
+  );
+};
+
+export const NavBar = ({ leftLinks }: { leftLinks?: React.ReactNode }) => (
   <nav className="nav-outer">
     <div className="nav-inner flex items-center max-[600px]:flex-col max-[600px]:items-center max-[600px]:py-4 max-[600px]:h-auto">
-      <a href="#header" className="max-[600px]:mb-2">
+      <Link to="/" className="max-[600px]:mb-2">
         <div className="flex items-center gap-2">
           <img
             alt="Polkadot Live Logo"
@@ -33,28 +74,17 @@ export const NavBar = () => (
             POLKADOT <span className="text-primary">LIVE</span>
           </span>
         </div>
-      </a>
+      </Link>
 
       <div className="nav-row flex-1 flex items-center justify-between gap-4 ml-6 max-[600px]:w-full max-[600px]:justify-center max-[600px]:ml-0">
-        <div className="nav-items flex-1 flex items-center justify-between gap-4 max-[600px]:flex-none max-[600px]:justify-center max-[600px]:w-auto">
-          <div className="nav-left flex items-center gap-6 max-[1000px]:hidden">
-            <NavItem label={'Overview'} href={'#features'} variant={'left'} />
-            <NavItem
-              label={'Networks'}
-              href={'#multi-chain'}
-              variant={'left'}
-            />
-            <NavItem label={'Accounts'} href={'#accounts'} variant={'left'} />
-            <NavItem
-              label={'Subscriptions'}
-              href={'#subscriptions'}
-              variant={'left'}
-            />
+        <div className="nav-items flex-1 flex items-center justify-between gap-5 max-[600px]:flex-none max-[600px]:justify-center max-[600px]:w-auto">
+          <div className="nav-left flex items-center gap-5 max-[1000px]:hidden text-[0.6rem]">
+            {leftLinks}
           </div>
 
           <div className="nav-right flex items-center gap-6 ml-auto mr-6 max-[600px]:ml-0 max-[600px]:mr-0 max-[600px]:justify-center">
             <NavItem label={'Home'} href={'/'} variant={'right'} />
-            <NavItem label={'Features'} href={'#features'} variant={'right'} />
+            <NavItem label={'Features'} href={'/features'} variant={'right'} />
           </div>
         </div>
 
