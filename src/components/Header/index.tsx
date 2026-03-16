@@ -2,7 +2,7 @@ import { DownloadBtn } from '../Buttons';
 import { Carousel } from './Carousel';
 
 export const Header = () => {
-  const TAG = '0.13.0-beta';
+  const TAG = '0.14.0-beta';
   const RELEASE_URI =
     'https://github.com/polkadot-live/polkadot-live-app/releases';
 
