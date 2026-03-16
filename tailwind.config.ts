@@ -8,6 +8,8 @@ export default {
         'background-light': '#FFFFFF',
         'light-border': '#E9ECEF',
         'surface-dark': '#1A1A1A',
+        'surface-darker': '#141414',
+        'surface-lighter': '#FAFAFA',
         'surface-light': '#F8F9FA',
         'surface-elevated-light': '#F1F3F5',
         'text-main-light': '#1A1A1A',

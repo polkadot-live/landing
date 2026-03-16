@@ -1,7 +1,7 @@
 export const Footer = () => (
   <footer className="py-20 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-none">
     <div className="max-w-7xl mx-auto px-8">
-      <div className="grid md:grid-cols-4 gap-16 mb-20">
+      <div className="grid md:grid-cols-5 gap-16 mb-20">
         <div className="col-span-1 md:col-span-2">
           <div className="flex items-center gap-2 mb-6">
             <img
@@ -23,6 +23,15 @@ export const Footer = () => (
               href={'https://github.com/polkadot-live/polkadot-live-app'}
             />
           </div>
+        </div>
+        <div>
+          <h6 className="font-bold dark:font-semibold mb-6 text-[10px] uppercase tracking-[0.2em] text-slate-900 dark:text-slate-500">
+            Platform
+          </h6>
+          <ul className="space-y-4 text-[10px] font-medium uppercase tracking-widest text-slate-500 dark:text-slate-400">
+            <FooterLink label={'Home'} href={'/'} blank={false} />
+            <FooterLink label={'Features'} href={'/#/features'} blank={false} />
+          </ul>
         </div>
         <div>
           <h6 className="font-bold dark:font-semibold mb-6 text-[10px] uppercase tracking-[0.2em] text-slate-900 dark:text-slate-500">
@@ -94,12 +103,20 @@ const FooterBtn = ({ icon, href }: { icon: string; href: string }) => (
   </a>
 );
 
-const FooterLink = ({ label, href }: { label: string; href: string }) => (
+const FooterLink = ({
+  label,
+  href,
+  blank = true,
+}: {
+  label: string;
+  href: string;
+  blank?: boolean;
+}) => (
   <li>
     <a
       className="hover:text-primary transition-colors"
       href={href}
-      target="_blank"
+      target={blank ? '_blank' : '_self'}
       rel="noopener"
     >
       {label}

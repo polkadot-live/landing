@@ -2,6 +2,8 @@ export * from './Accounts';
 export * from './Features';
 export * from './Footer';
 export * from './Header';
+export * from './Heros';
+export * from './Highlights';
 export * from './MultiChain';
 export * from './NavBar';
 export * from './Subscriptions';
