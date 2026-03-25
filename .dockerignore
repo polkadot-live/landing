@@ -1,0 +1,43 @@
+# Optimized .dockerignore for Node.js + React
+# Based on actual project structure
+
+# Version control
+.git/
+.github/
+.gitignore
+
+# Dependencies (installed in container)
+node_modules/
+
+# Build outputs (built in container)
+dist/
+
+# Environment files
+.env*
+
+# Development files
+.vscode/
+*.log
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+docs/
+
+# Deployment configs
+Dockerfile*
+.dockerignore
+compose.yaml
+Taskfile.yml
+
+# Non-essential configs (keep build configs)
+!biome.json
+!vite.config.ts
+!tailwind.config.ts
+!tsconfig.json
+!tsconfig.app.json
+!tsconfig.node.json
